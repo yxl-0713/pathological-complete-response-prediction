@@ -15,7 +15,7 @@ class MRIDataset(Dataset):
         self.input_mode = input_mode
         self.files = self.valid_ids
         self.transforms = tio.Compose([
-            tio.RandomAffine(scales=0.05, degrees=5, translation=3, p=0.3),
+            tio.RandomAffine(scales=0.05, degrees=10, translation=3, p=0.3),
             tio.RandomNoise(mean=0, std=0.01, p=0.2),
         ])
 
